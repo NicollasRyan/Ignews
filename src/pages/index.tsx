@@ -1,7 +1,8 @@
 import React from "react";
+import styles from '../styles/home.module.scss'
 
 export default function Home() {
   return (
-    <h1>hello</h1>
+    <h1 className={styles.title}>Hello</h1>
   )
 }
