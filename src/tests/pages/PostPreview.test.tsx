@@ -13,7 +13,11 @@ const post = {
 };
 
 jest.mock("next-auth/react");
-jest.mock("next/router");
+jest.mock("next/router", () => ({
+  useRouter: jest.fn().mockReturnValue({
+    push: jest.fn(),
+  }),
+}));
 jest.mock("../../services/prismic");
 
 describe("Post preview page", () => {
